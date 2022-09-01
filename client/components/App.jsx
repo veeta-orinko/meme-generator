@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Form from './Form'
 import DadJoke from './DadJoke'
-import Sheba from './Sheba'
+import Shiba from './Shiba'
 import Snack from './Snack'
 
 import { getWelcome, getSnacks } from '../apiClient'
@@ -50,7 +50,7 @@ function App() {
 
       {!visibility && <Snack />}
 
-      {!visibility && <Sheba />}
+      <Shiba />
 
       {/* need a new user button to unhide */}
     </div>

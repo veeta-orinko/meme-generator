@@ -11,8 +11,13 @@ export function getSnacks() {
   return request.get(`${serverURL}/snacks`).then((response) => response.body)
 }
 
-// export function getRadomSnack() {
-//   return request.get(`${serverURL}/snacks`).then((response) => response.body)
-// }
 
-// ***   ***   ***
+export function getShiba() {
+  return request.get('/api/v1/shibas').then((response) => {
+    console.log(response.body)
+    return response.body
+  })
+}
+
+
+
