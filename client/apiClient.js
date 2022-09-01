@@ -11,4 +11,8 @@ export function getSnacks() {
   return request.get(`${serverURL}/snacks`).then((response) => response.body)
 }
 
+// export function getRadomSnack() {
+//   return request.get(`${serverURL}/snacks`).then((response) => response.body)
+// }
+
 // ***   ***   ***

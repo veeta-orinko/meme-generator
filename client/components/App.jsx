@@ -27,15 +27,18 @@ function App() {
   })
 
   //causes error - need help
-  // useEffect(() => {
-  //   getSnacks()
-  //     .then((res) => {
-  //       setSnacks(res)
-  //     })
-  //     .catch((err) => {
-  //       console.error(err.message)
-  //     })
-  // })
+  useEffect(() => {
+    getSnacks()
+      .then((res) => {
+        console.log(res)
+        setSnacks(res)
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
+  }, [])
+  //second parameter of useEffect (Para1=function, and para2= what items useEffect watches)
+  // "use the function in para1 whenever something I'm watching is affected"
 
   return (
     <div>
