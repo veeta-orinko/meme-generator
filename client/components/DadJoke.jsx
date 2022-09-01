@@ -1,5 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { getDadJoke } from '../apiClient'
 
 export default function DadJoke() {
-  return <h2>Dadjoke placeholder</h2>
+  const [text, setText] = useState('')
+
+  useEffect(() => {
+    getDadJoke().then((response) => {
+      setText(response)
+    })
+  })
+  return (
+    <div>
+      <p>{text}</p>
+    </div>
+  )
 }

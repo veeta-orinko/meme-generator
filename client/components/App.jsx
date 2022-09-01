@@ -47,6 +47,7 @@ function App() {
 
       {visibility && <Form toggleHidden={toggleHidden} />}
       {!visibility && <DadJoke />}
+      <DadJoke />
 
       {!visibility && <Snack />}
 

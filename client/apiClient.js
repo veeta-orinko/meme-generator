@@ -20,4 +20,11 @@ export function getShiba() {
 }
 
 
+export function getDadJoke() {
+  return request.get('/api/v1/dadjoke').then((response) => {
+    console.log(response)
+    return response
+  })
+}
+
 
