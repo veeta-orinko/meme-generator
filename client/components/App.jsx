@@ -29,10 +29,14 @@ function App() {
   return (
     <div>
       <h1>{welcomeStatement}</h1>
+      {/* personal message to user */}
+
       {visibility && <Form toggleHidden={toggleHidden} />}
       {!visibility && <DadJoke />}
       {!visibility && <Snack />}
       {!visibility && <Sheba />}
+
+      {/* need a new user button to unhide */}
     </div>
   )
 }
