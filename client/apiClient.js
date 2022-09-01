@@ -6,4 +6,9 @@ const serverURL = 'http://localhost:3000/api/v1'
 export function getWelcome() {
   return request.get(`${serverURL}/welcome`).then((response) => response.body)
 }
+
+export function getSnacks() {
+  return request.get(`${serverURL}/snacks`).then((response) => response.body)
+}
+
 // ***   ***   ***

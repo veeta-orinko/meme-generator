@@ -14,15 +14,4 @@ router.get('/', (req, res) => {
   }
 })
 
-router.get('/snacks', (req, res) => {
-  db.getSnacks()
-    .then((snacks) => {
-      res.json(snacks)
-    })
-    .catch((err) => {
-      console.error(err.message)
-      res.status(500).send('server error')
-    })
-})
-
 module.exports = router
