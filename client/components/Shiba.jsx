@@ -13,7 +13,7 @@ export default function Shiba() {
 
   return (
     <div>
-      <img src={image} />
+      <img src={image} alt="shiba dog" />
     </div>
   )
 }

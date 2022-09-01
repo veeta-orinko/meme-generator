@@ -20,4 +20,13 @@ server.get('/api/v1/shibas', (req, res) => {
   return null
 })
 
+server.get('/api/v1/dadjoke', (req, res) => {
+  return request
+    .get('https://icanhazdadjoke.com/')
+    .set('Accept', 'application/json')
+    .then((response) => {
+      res.json(response)
+    })
+})
+
 module.exports = server
