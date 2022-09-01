@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react'
+import Form from './Form'
 
 import { getWelcome } from '../apiClient'
 
 function App() {
   const [welcomeStatement, setWelcomeStatement] = useState('')
+  const [visibility, setVisibility] = useState(true)
+
+  function toggleHidden() {
+    setVisibility(false)
+  }
 
   useEffect(() => {
     getWelcome()
@@ -15,7 +21,12 @@ function App() {
       })
   })
 
-  return <h1>{welcomeStatement}</h1>
+  return (
+    <div>
+      <h1>{welcomeStatement}</h1>
+      {visibility && <Form toggleHidden={toggleHidden} />}
+    </div>
+  )
 }
 
 export default App
