@@ -4,10 +4,12 @@ import DadJoke from './DadJoke'
 import Sheba from './Sheba'
 import Snack from './Snack'
 
-import { getWelcome } from '../apiClient'
+import { getWelcome, getSnacks } from '../apiClient'
 
 function App() {
   const [welcomeStatement, setWelcomeStatement] = useState('')
+  const [snacks, setSnacks] = useState('')
+
   const [visibility, setVisibility] = useState(true)
 
   function toggleHidden() {
@@ -24,15 +26,30 @@ function App() {
       })
   })
 
-  //console.log(!visibility)
+  //causes error - need help
+  // useEffect(() => {
+  //   getSnacks()
+  //     .then((res) => {
+  //       setSnacks(res)
+  //     })
+  //     .catch((err) => {
+  //       console.error(err.message)
+  //     })
+  // })
 
   return (
     <div>
       <h1>{welcomeStatement}</h1>
+      {/* personal message to user */}
+
       {visibility && <Form toggleHidden={toggleHidden} />}
       {!visibility && <DadJoke />}
+
       {!visibility && <Snack />}
+
       {!visibility && <Sheba />}
+
+      {/* need a new user button to unhide */}
     </div>
   )
 }
