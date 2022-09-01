@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Form from './Form'
+import DadJoke from './DadJoke'
+import Sheba from './Sheba'
+import Snack from './Snack'
 
 import { getWelcome } from '../apiClient'
 
@@ -8,7 +11,7 @@ function App() {
   const [visibility, setVisibility] = useState(true)
 
   function toggleHidden() {
-    setVisibility(false)
+    setVisibility(!visibility)
   }
 
   useEffect(() => {
@@ -21,10 +24,15 @@ function App() {
       })
   })
 
+  //console.log(!visibility)
+
   return (
     <div>
       <h1>{welcomeStatement}</h1>
       {visibility && <Form toggleHidden={toggleHidden} />}
+      {!visibility && <DadJoke />}
+      {!visibility && <Snack />}
+      {!visibility && <Sheba />}
     </div>
   )
 }

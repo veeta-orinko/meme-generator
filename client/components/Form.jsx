@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 const initialData = { name: '' }
 
 export default function AddName(props /*{ saveName }*/) {
+  //props = toggleHidden
   const [data, setData] = useState(initialData)
   const { name } = data
 
