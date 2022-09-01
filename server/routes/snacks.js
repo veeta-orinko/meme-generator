@@ -7,9 +7,9 @@ const db = require('../db/db')
 
 // GET - '/v1/snacks' - Get a list of snacks - Returns an array of snacks
 router.get('/', (req, res) => {
-  db.getSnacks()
-    .then((snacks) => {
-      res.json(snacks)
+  db.getRandomSnack()
+    .then((snack) => {
+      res.json(snack)
     })
     .catch((err) => {
       console.error(err.message)
