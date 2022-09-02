@@ -47,19 +47,12 @@ function App() {
       {!visibility && <DadJoke />}
       {!visibility && <Snack />}
 
-      <Shiba />
-
       <div className="dadjoke">
         <DadJoke />
       </div>
 
       <div className="container">
-        {/* {!visibility && <Snack />} */}
-
-        {/* image snack */}
         <Snack snackImage={snack} />
-
-        {/* image 2 sheba*/}
         <Shiba />
 
         {/* need a new user button to unhide */}
