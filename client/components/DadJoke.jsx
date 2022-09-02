@@ -5,7 +5,6 @@ export default function DadJoke() {
   const [text, setText] = useState('')
 
   useEffect(() => {
-
     getDadJoke()
       .then((response) => {
         setText(response)
@@ -14,8 +13,7 @@ export default function DadJoke() {
   }, [])
   return (
     <div>
-      <h1>{text.joke}</h1>
-
+      <h1 className="center">{text.joke}</h1>
     </div>
   )
 }
