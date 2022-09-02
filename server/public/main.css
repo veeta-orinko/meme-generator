@@ -1,0 +1,57 @@
+
+.center {
+  text-align: center;
+  
+}
+/* .container {
+  display: inline-block;
+
+} */
+
+body {
+  text-align: center;
+
+
+}
+
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+img {
+  height: 300px;
+  width: 300px;
+  padding-left:10px;
+  padding-right:10px;
+  
+  object-fit: cover;
+  border-radius: 20%;
+  display: block;
+ 
+  
+}
+
+.dadjoke {
+    width: 400px;
+    border: 15px solid;
+    border-color: #D315B;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 40px;
+  }
+
+
+/* #D315B purple 
+444B6E lighter puirple
+708B75 Greenish
+9AB87A lighter green
+F8F991 yellow*/
+
