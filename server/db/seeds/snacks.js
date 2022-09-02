@@ -17,7 +17,7 @@ exports.seed = (knex) => {
         },
         {
           id: 203,
-          name: 'Emu & Chips',
+          name: 'Moa & Chips',
           image: './images/moa-and-chips',
         },
         {
