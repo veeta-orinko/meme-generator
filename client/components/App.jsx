@@ -26,7 +26,6 @@ function App() {
       })
   })
 
-  //causes error - need help
   useEffect(() => {
     getSnacks()
       .then((res) => {
@@ -47,11 +46,9 @@ function App() {
 
       {visibility && <Form toggleHidden={toggleHidden} />}
       {!visibility && <DadJoke />}
-      <DadJoke />
-
       {!visibility && <Snack />}
-
-      <Shiba />
+      {!visibility && <Shiba />}
+      <Snack />
 
       {/* need a new user button to unhide */}
     </div>

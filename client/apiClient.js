@@ -8,7 +8,10 @@ export function getWelcome() {
 }
 
 export function getSnacks() {
-  return request.get(`${serverURL}/snacks`).then((response) => response.body)
+  return request.get(`${serverURL}/snacks`).then((response) => {
+    console.log(response)
+    response.body
+  })
 }
 
 export function getShiba() {
