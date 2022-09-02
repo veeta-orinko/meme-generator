@@ -23,10 +23,12 @@ server.get('/api/v1/shibas', (req, res) => {
 server.get('/api/v1/dadjoke', (req, res) => {
   return request
     .get('https://icanhazdadjoke.com/')
+
     .set('Accept', 'application/json')
     .then((response) => {
       res.json(response)
     })
+
 })
 
 module.exports = server

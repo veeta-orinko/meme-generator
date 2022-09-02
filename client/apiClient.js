@@ -11,14 +11,18 @@ export function getSnacks() {
   return request.get(`${serverURL}/snacks`).then((response) => response.body)
 }
 
+
 export function getShiba() {
   return request.get('/api/v1/shibas').then((response) => {
     return response.body
   })
 }
 
+
 export function getDadJoke() {
   return request.get('/api/v1/dadjoke').then((response) => {
     return JSON.parse(response.body.text)
   })
 }
+
+
