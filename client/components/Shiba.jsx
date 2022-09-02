@@ -15,7 +15,9 @@ export default function Shiba() {
 
   return (
     <div>
-      <img src={image} alt="random shiba" />
+
+      <img src={image} alt="shiba dog" />
+
     </div>
   )
 }

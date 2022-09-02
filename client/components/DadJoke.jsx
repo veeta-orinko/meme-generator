@@ -5,13 +5,17 @@ export default function DadJoke() {
   const [text, setText] = useState('')
 
   useEffect(() => {
-    getDadJoke().then((response) => {
-      setText(response)
-    })
-  })
+
+    getDadJoke()
+      .then((response) => {
+        setText(response)
+      })
+      .catch((err) => console.error(err))
+  }, [])
   return (
     <div>
-      <p>{text}</p>
+      <h1>{text.joke}</h1>
+
     </div>
   )
 }
