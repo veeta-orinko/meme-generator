@@ -41,16 +41,39 @@ function App() {
 
   return (
     <div>
-      <h1>{welcomeStatement}</h1>
+      <h1 className="center">{welcomeStatement}</h1>
       {/* personal message to user */}
 
       {visibility && <Form toggleHidden={toggleHidden} />}
+
       {!visibility && <DadJoke />}
+<<<<<<< HEAD
       {!visibility && <Snack />}
       {!visibility && <Shiba />}
       <Snack />
+||||||| 996c909
+      <DadJoke />
 
-      {/* need a new user button to unhide */}
+      {!visibility && <Snack />}
+
+      <Shiba />
+=======
+      <div className="dadjoke">
+        <DadJoke />
+      </div>
+
+      <div className="container">
+        {/* {!visibility && <Snack />} */}
+
+        {/* image sheba */}
+        <Shiba />
+
+        {/* image 2 snack*/}
+        <Shiba />
+>>>>>>> c8dcb995e96d9f302b29ed4c686308bd702b45e9
+
+        {/* need a new user button to unhide */}
+      </div>
     </div>
   )
 }

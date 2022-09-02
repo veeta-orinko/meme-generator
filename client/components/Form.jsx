@@ -26,8 +26,8 @@ export default function AddName(props /*{ saveName }*/) {
   // && - ifTrue && doThis
   return (
     <div id="form" hidden="">
-      <h3>Add Your Name For Good Vibezzzz</h3>
-      <form onSubmit={handleSubmit}>
+      <h3 className="center">Add Your Name For Good Vibezzzz</h3>
+      <form className="center" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name</label>
           <input
