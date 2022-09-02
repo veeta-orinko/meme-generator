@@ -45,7 +45,6 @@ exports.seed = (knex) => {
           name: 'Recently Extinct Platter',
           image: './images/recently-extinct-platter',
         },
-
         {
           id: 209,
           name: 'Cosmic Moa Cake',
