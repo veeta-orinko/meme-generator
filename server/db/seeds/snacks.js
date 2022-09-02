@@ -17,8 +17,8 @@ exports.seed = (knex) => {
         },
         {
           id: 203,
-          name: 'Moa Drumsticks',
-          image: './images/moa-drumsticks',
+          name: 'Emu & Chips',
+          image: './images/moa-and-chips',
         },
         {
           id: 204,
@@ -27,8 +27,8 @@ exports.seed = (knex) => {
         },
         {
           id: 205,
-          name: 'Inedible Cactus',
-          image: './images/inedible-cactus',
+          name: 'Egg chowder',
+          image: './images/egg-chowder',
         },
         {
           id: 206,
@@ -37,13 +37,18 @@ exports.seed = (knex) => {
         },
         {
           id: 207,
-          name: 'Sheba Emu Fritters',
-          image: './images/shiba-pancakes.jpg',
+          name: 'Shiba Pancakes',
+          image: './images/shiba-pancakes',
         },
         {
           id: 208,
           name: 'Recently Extinct Platter',
           image: './images/recently-extinct-platter',
+        },
+        {
+          id: 209,
+          name: 'Cosmic Moa Cake',
+          image: './images/cosmic-moa-cake',
         },
       ])
     })

@@ -11,8 +11,6 @@ function getSnacks(db = connection) {
   return db('snacks').select()
 }
 
-
-
 // server.get('/api/v1/affirmation', (req, res) => {
 //   console.log(process.env.SECRET_KEY)
 //   return request
@@ -45,4 +43,3 @@ function getRandomSnack() {
       })
   )
 }
-
