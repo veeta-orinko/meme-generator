@@ -7,10 +7,10 @@ export function getWelcome() {
   return request.get(`${serverURL}/welcome`).then((response) => response.body)
 }
 
-export function getSnacks() {
-  return request.get(`${serverURL}/snacks`).then((response) => {
-    console.log(response)
-    response.body
+export function getSnack() {
+  return request.get('/api/v1/snacks').then((response) => {
+    console.log('apiclient', response)
+    return response.body
   })
 }
 

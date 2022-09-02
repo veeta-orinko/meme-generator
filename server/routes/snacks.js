@@ -9,6 +9,7 @@ const db = require('../db/db')
 router.get('/', (req, res) => {
   db.getRandomSnack()
     .then((snack) => {
+      console.log(snack)
       res.json(snack)
     })
     .catch((err) => {
