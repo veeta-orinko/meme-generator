@@ -4,11 +4,11 @@ import DadJoke from './DadJoke'
 import Shiba from './Shiba'
 import Snack from './Snack'
 
-import { getWelcome, getSnacks } from '../apiClient'
+import { getWelcome, getSnack } from '../apiClient'
 
 function App() {
   const [welcomeStatement, setWelcomeStatement] = useState('')
-  const [snacks, setSnacks] = useState('')
+  const [snack, setSnack] = useState('')
 
   const [visibility, setVisibility] = useState(true)
 
@@ -27,10 +27,10 @@ function App() {
   })
 
   useEffect(() => {
-    getSnacks()
+    getSnack()
       .then((res) => {
+        setSnack(res)
         console.log(res)
-        setSnacks(res)
       })
       .catch((err) => {
         console.error(err.message)
@@ -42,22 +42,13 @@ function App() {
   return (
     <div>
       <h1 className="center">{welcomeStatement}</h1>
-      {/* personal message to user */}
 
       {visibility && <Form toggleHidden={toggleHidden} />}
-
       {!visibility && <DadJoke />}
-<<<<<<< HEAD
-      {!visibility && <Snack />}
-      {!visibility && <Shiba />}
-      <Snack />
-||||||| 996c909
-      <DadJoke />
-
       {!visibility && <Snack />}
 
       <Shiba />
-=======
+
       <div className="dadjoke">
         <DadJoke />
       </div>
@@ -65,12 +56,11 @@ function App() {
       <div className="container">
         {/* {!visibility && <Snack />} */}
 
-        {/* image sheba */}
-        <Shiba />
+        {/* image snack */}
+        <Snack snackImage={snack} />
 
-        {/* image 2 snack*/}
+        {/* image 2 sheba*/}
         <Shiba />
->>>>>>> c8dcb995e96d9f302b29ed4c686308bd702b45e9
 
         {/* need a new user button to unhide */}
       </div>

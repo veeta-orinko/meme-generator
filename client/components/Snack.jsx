@@ -1,19 +1,18 @@
-// import React, { useState, useEffect } from 'react'
-// import { getRandomSnack } from '../server/db'
+import React from 'react'
+//import { getRandomSnack } from '../server/db'
 
-// export default function Snack() {
-//   const [currentSnack, setSnack] = useState('')
+export default function Snack(props) {
+  //const [currentSnack, setSnack] = useState('')
 
-//   useEffect(() => {
-//     getRandomSnack()
-//       .then((response) => setSnack(response))
-//       .catch((err) => console.error(err))
-//   })
+  // useEffect(() => {
+  //   getRandomSnack()
+  //     .then((response) => setSnack(response))
+  //     .catch((err) => console.error(err))
+  // })
 
-//   return (
-//     <div>
-//       <h3>{getRandomSnack.name}</h3>
-//       <img src={getRandomSnack.img} alt="" />
-//     </div>
-//   )
-// }
+  return (
+    <div>
+      <img src={props.snackImage.image} alt="" />
+    </div>
+  )
+}
