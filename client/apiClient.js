@@ -9,7 +9,7 @@ export function getWelcome() {
 
 export function getSnack() {
   return request.get('/api/v1/snacks').then((response) => {
-    console.log('apiclient', response)
+    //console.log('apiclient', response)
     return response.body
   })
 }

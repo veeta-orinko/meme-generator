@@ -1,3 +1,8 @@
+*{
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #efdcac;
+}
+
 
 .center {
   text-align: center;
@@ -12,6 +17,22 @@ body {
   text-align: center;
 
 
+}
+
+#form {
+  border: #ab8777 solid 5px;
+  width: 400px;
+  margin: auto;
+  padding-bottom: 20px; 
+  justify-content:center;
+}
+
+.submit {
+  background-color: #ce5542;
+}
+
+button {
+  background-color: #ce5542;
 }
 
 .container {
@@ -46,6 +67,9 @@ img {
     margin-bottom: 40px;
     text-align: center;
     padding: 40px;
+  }
+  .textsize {
+    font-size:25px;
   }
 
 

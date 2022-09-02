@@ -13,6 +13,7 @@ export default function DadJoke() {
   }, [])
   return (
     <div>
+      <p className="textsize">Your dad joke of the day is:</p>
       <h1 className="center">{text.joke}</h1>
     </div>
   )

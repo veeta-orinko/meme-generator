@@ -9,12 +9,19 @@ import { getWelcome, getSnack } from '../apiClient'
 function App() {
   const [welcomeStatement, setWelcomeStatement] = useState('')
   const [snack, setSnack] = useState('')
+  const [userName, setUserName] = useState('')
 
   const [visibility, setVisibility] = useState(true)
 
   function toggleHidden() {
     setVisibility(!visibility)
   }
+
+  function saveName(data) {
+    setUserName(data.name)
+  }
+
+  console.log(typeof userName)
 
   useEffect(() => {
     getWelcome()
@@ -30,7 +37,7 @@ function App() {
     getSnack()
       .then((res) => {
         setSnack(res)
-        console.log(res)
+        //console.log(res)
       })
       .catch((err) => {
         console.error(err.message)
@@ -42,21 +49,23 @@ function App() {
   return (
     <div>
       <h1 className="center">{welcomeStatement}</h1>
+      {!visibility && (
+        <h2 className="center">{`${userName}, here's what to look forward to today...`}</h2>
+      )}
 
-      {visibility && <Form toggleHidden={toggleHidden} />}
-      {!visibility && <DadJoke />}
-      {!visibility && <Snack />}
-
-      <div className="dadjoke">
-        <DadJoke />
-      </div>
-
+      {visibility && <Form toggleHidden={toggleHidden} saveName={saveName} />}
+      {!visibility && (
+        <div className="dadjoke">
+          {' '}
+          <DadJoke />
+        </div>
+      )}
       <div className="container">
-        <Snack snackImage={snack} />
-        <Shiba />
-
-        {/* need a new user button to unhide */}
+        {!visibility && <Snack snackImage={snack} />}
+        {!visibility && <Shiba />}
       </div>
+
+      {/* need a new user button to unhide */}
     </div>
   )
 }

@@ -16,20 +16,21 @@ export default function AddName(props /*{ saveName }*/) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    // saveName(data) //This is to setState at the App level
     setData(initialData)
+    props.saveName(data) //This is to setState at the App level
     props.toggleHidden()
   }
 
   //visibility &&'no longer renders the form
   // ternary - ifTrue ? doThis : otherWiseDoThis
   // && - ifTrue && doThis
+
   return (
     <div id="form" hidden="">
       <h3 className="center">Add Your Name For Good Vibezzzz</h3>
       <form className="center" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Your Name</label>
           <input
             type="text"
             id="name"
@@ -38,7 +39,7 @@ export default function AddName(props /*{ saveName }*/) {
             onChange={handleChange}
           />
         </div>
-        <input type="submit" />
+        <input className="submit" type="submit" />
         <button
           onClick={(e) => {
             e.preventDefault()

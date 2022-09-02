@@ -7,7 +7,7 @@ export default function Shiba() {
   useEffect(() => {
     getShiba()
       .then((response) => {
-        console.log(response)
+        //console.log(response)
         setImage(response[0])
       })
       .catch((err) => console.error(err.message))
@@ -15,6 +15,7 @@ export default function Shiba() {
 
   return (
     <div>
+      <h3>This is your spirit-shiba:</h3>
       <img src={image} alt="shiba dog" />
     </div>
   )

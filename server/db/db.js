@@ -35,9 +35,9 @@ function getRandomSnack() {
         const randomIndex = Math.floor(Math.random() * arr.length)
         // random index based on the array
         const item = arr[randomIndex]
-        console.log(item)
-        console.log(randomIndex)
-        console.log(arr)
+        //console.log(item)
+        // console.log(randomIndex)
+        // console.log(arr)
 
         // puts it in the item
         return item
